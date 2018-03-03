@@ -1,0 +1,13 @@
+
+
+/* Fixed error 1071 
+   In class -AppServiceProvider- , change this way 	
+*/
+//-------------------------------------
+use Illuminate\Support\Facades\Schema;
+
+ public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
+//-------------------------------------------

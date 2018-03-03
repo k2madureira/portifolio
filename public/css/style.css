@@ -1,0 +1,33 @@
+html,
+body {
+  min-height: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  
+
+ 
+}
+
+.container {
+	
+  margin-top: 4rem;
+}
+
+.progress {
+  height: 1em;
+  margin-top: 0.5rem;
+}
+.progress-type {
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 0;
+
+}
+
+#nav {
+	background-color: #000218;
+  
+}
+
+.svg {
+  display: none;
+}
