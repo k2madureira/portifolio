@@ -7,6 +7,17 @@ use App\Post;
 
 class PostsController extends Controller
 {
+   
+
+   public function __construct () {
+
+      $this->middleware('auth')->except(['index','show','showPosts']);
+
+   }
+
+
+
+
    public function show (Post $post) {
 
    		
@@ -37,21 +48,17 @@ class PostsController extends Controller
    				'body'  => 'required'
    			]);
 
-   		Post::create(request(['title','body']));
+   		Post::create([
 
-
-   		/*
-   		// another way, to create a new post
-
-   		$post = new Post;
-   		$post->title = request('post-Title');
-   		$post->body  = request('post-Text');
-   		$post->save(); */
-
+                'title'  => request('title'),
+                'body'   => request('body'),
+                'user_id'=> auth()->id()  
+            ]);
 
    		
    	// And the redirect to the home page
 
+      
    		return redirect('/');
    		
    }

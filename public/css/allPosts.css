@@ -1,0 +1,18 @@
+.posts p {
+  
+  max-width: 20ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-title {
+	margin-bottom: 0.5em;
+	font-size: 1.5rem;
+}
+
+.post-date {
+	 text-align: left;
+	 color:grey;
+	 font-size:0.8rem;
+}

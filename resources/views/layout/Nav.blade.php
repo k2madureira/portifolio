@@ -28,10 +28,29 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ url('/about') }}">Sobre</a>
               </li>
+
+
               
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/posts/create') }}">Criar</a>
-              </li>
+              @if (Auth::check())
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/create') }}">Criar</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/update') }}">Update</a>
+                  </li>
+
+                   <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/logout') }}">Logout</a>
+                  </li>
+
+              @else
+              
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                  </li>
+
+              @endif
           </ul>
        
         </div>

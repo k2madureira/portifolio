@@ -3,11 +3,7 @@
        
       @section('content')
         
-          
-            <h3></h3>
-           
-                
-                 
+               
 
                       <h2 class="post-title lead">
                         {{ $post->title }}

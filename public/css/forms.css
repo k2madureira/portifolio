@@ -1,0 +1,32 @@
+.title-form {
+	color: blue;
+	font-size: 1.3rem;
+	padding-bottom: 1em;
+}
+.form-label {
+	padding-top:0.5em;
+	padding-bottom: 0.5em;
+}
+
+.box-label {
+	width:1em;
+	height:1em;
+	margin-right: 0.5em;
+	float: left;
+	
+}
+
+#bl-html {
+	background-color: blue;
+}
+
+#bl-css {
+	background-color: green;
+}
+
+#bl-js {
+	background-color: yellow;
+}
+#bl-php {
+	background-color: red;
+}

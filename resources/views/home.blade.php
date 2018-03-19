@@ -21,13 +21,13 @@
         <div class="row">
         
         <!-- Avatar auth --> 
-        
+        @foreach($skills as $skill)
          <div class="col-lg-4 avatar-box">
               
 
           <img class="rounded-circle" src="/img/avatar.png" alt="Generic placeholder image" width="140" height="140">
             <h2>Lenilson Madureira</h2>
-            <p> Bacharel em Sistemas de informação, pela universidade do estado da Bahia (UNEB)</p>
+            <p> {{ $skill->description }}</p>
             
          </div>
          
@@ -36,20 +36,22 @@
          <!-- Skills progress --> 
 
         <div class="col-md-4 skill-box">
+
+      
         
         <span class="progress-type">Html</span>
         
             <div class="progress">
-
-              <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
-
+              
+              <div class="progress-bar" role="progressbar" style="width: {{  $skill->html }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{  $skill->html }}%</div>
+              
             </div>
 
         <span class="progress-type">Css</span>
 
             <div class="progress">
 
-              <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: {{  $skill->css }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{  $skill->css }}%</div>
 
             </div>
 
@@ -57,7 +59,7 @@
 
             <div class="progress">
 
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
+              <div class="progress-bar bg-warning" role="progressbar" style="width: {{  $skill->js }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{  $skill->js }}%</div>
 
             </div>
 
@@ -65,10 +67,12 @@
 
             <div class="progress">
 
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+              <div class="progress-bar bg-danger" role="progressbar" style="width: {{  $skill->php }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{  $skill->php }}%</div>
 
             </div>
 
+        @endforeach
+      
       </div>
       
       <div class="col-md-4 social-box">
